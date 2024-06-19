@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Muscial school admission</title>
+        <style>
+        form{
+            color: black;
+            width: 60%;
+            margin: auto;
+            font-size: large;
+            background-color: white;
+            border: 20px rgb(180, 250, 226); 
+            outline: 30px solid rgb(154, 247, 216);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        label{
+            width: 240px;
+            display: inline-block;
+            padding-bottom: 10px;
+            
+        }
+        .month{
+            width: 10px;;
+            padding-bottom: 10px;
+        }
+        .date{
+            width:10px
+        }
+        .year{
+            width:10px;
+        }
+        .instrument{
+            width:20px;
+            padding-bottom: 10px;
+        }
+        .container{
+            position: relative;
+            color: black; 
+            background-color:rgb(191, 185, 177); 
+   
+        }
+        .center{
+            position: absolute;
+            top: 50%;
+           right: 16px;
+ 
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+       
+        select {
+            width: 30%; 
+            padding: 10px; 
+            box-sizing: border-box; 
+            margin-bottom: 10px; 
+            border-radius: 5px; 
+        }
+        textarea{
+            width: 40%;
+            padding:30%;
+        }
+        .days input[type="checkbox"] {
+            vertical-align: middle;
+            margin-right: 10px; 
+        }
+        .required::after{
+            content: "*";
+            color:red ;
+
+        }
+        button{
+            width: 20%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        </head>
+        <body>
+            <form id="form">
+                <div class="container">
+                    <img  id="pic"src="C:\Users\kamal\OneDrive\Pictures\Screenshots\muscical1.jpg"style="width: 40%">
+                    <div class="center"><b>MUSIC SCHOOL REGISTRATION</b><br>Register to our music school from below</div>
+                </div><br>
+                <label for="name" class="required">Name</label><br>
+                <input type="text" id="firstname" name="firstname" style="padding: 10px;">
+                <input type="text" id="last-name" name="last-name"required ><br>
+                <label class="required">Birth Date</label><br>
+                <select id="month">
+                    <option>please select month</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <select id="date">
+                    <option>please select date</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</optional>
+                    <option value="22">22</optiona>
+                    <option value="23">23</optiona>
+                    <option value="24">24</optiona>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select id="year" name="year">
+                    <option value="please select the year">please select the year</option>
+                </select><br>
+              <label class="required">Choice of the Instrument</label><br>
+                   <select id="Instrument">
+                    <option>please select</option>
+                    <option value="violin">violin</option>
+                    <option value="Guitar">Guitar</option>
+                    <option value="Bass">Bass</option>
+                    <option value="Drums">Drums</option>
+                    <option value="Vocals">Vocals</option>
+                </select><br>
+                <label class="required">Pick Days of Class</label><br>
+                <div id="days" class="days" name="days">
+                    <input type="checkbox" name="days" value="Monday" id="monday"><label for="monday">Monday</label>
+                    <input type="checkbox" name="days" value="Tuesday" id="tuesday"><label for="tuesday">Tuesday</label><br>
+                    <input type="checkbox" name="days" value="Wednesday" id="wednesday"><label for="wednesday">Wednesday</label>
+                    <input type="checkbox" name="days" value="Thursday" id="thursday"><label for="thursday">Thursday</label><br>
+                    <input type="checkbox" name="days" value="Friday" id="friday"><label for="friday">Friday</label>
+                    <input type="checkbox" name="days" value="Saturday" id="saturday"><label for="saturday">Saturday</label><br>
+                    <input type="checkbox" name="days" value="Sunday" id="sunday"><label for="sunday">Sunday</label><br>
+                </div>
+                <label class="required">Start Date& Time</label><br>
+                <input type="date" id="da" name="de">
+                <input type="time" id="ti" value="11:30" name="ti">
+                <select>
+                    <option value="AM">AM</option>
+                    <option value="PM" selected>PM</option>
+
+                </select><br>
+                <label>Comment</label><br>
+               <textarea style="width: 90%;padding: 10px;  box-sizing: border-box; 
+               margin-bottom: 10px; 
+               border-radius: 5px; "></textarea>
+               <center><button type="submit" style="background-color: rgb(16, 16, 205);font-size: large;">submit</button></center>
+            </form>
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        const startYear = currentYear - 100;
+        const yearSelect = document.getElementById('year');
+        for (let year = currentYear; year >= startYear; year--) {
+            const option = document.createElement('option'); 
+           option.value = year;
+            option.textContent = year;
+            yearSelect.appendChild(option);
+        }
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        let  name=document.getElementById('firstname').value;
+        console.log("firstname:",name);
+        let  lname=document.getElementById('last-name').value;
+        console.log("lastname:",lname);
+        let  date=document.getElementById('date').value;
+        console.log("date:",date);
+        let  month=document.getElementById('month').value;
+        console.log("month:",month);
+        let  year=document.getElementById('year').value;
+        console.log("year:",year);
+        let  Instrument=document.getElementById('Instrument').value;
+        console.log("Instrument:",Instrument);
+        let day=document.querySelectorAll('input[name="days"]:checked');
+        console.log("day:",day);
+        let dates=document.querySelectorAll('input[name="de"]:checked');
+        console.log("date:", dates);
+        let times=document.querySelectorAll('input[name="ti"]:type:time');
+        console.log("time:" ,times);
+        });
+            </script>
+        </body>
+</html>
